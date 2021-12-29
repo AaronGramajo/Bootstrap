@@ -16,7 +16,7 @@
     color: rgb(0, 255, 0) !important;
 }
 
-/* carousel
-.carousel-inner img {
-    
-} */
+/* carousel */
+.carousel-item {
+    height: 32rem;
+}
