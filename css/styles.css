@@ -1,0 +1,22 @@
+/* topbar */
+.navbar-text {
+    color:rgb(0, 255, 0) !important;
+}
+
+.socialIconos .nav-link {
+    color: rgb(179, 20, 199) !important;
+}
+
+/* bottombar */
+.navbar-brand {
+    font-size: 3rem;
+}
+
+.bottombar .nav-link {
+    color: rgb(0, 255, 0) !important;
+}
+
+/* carousel
+.carousel-inner img {
+    
+} */
