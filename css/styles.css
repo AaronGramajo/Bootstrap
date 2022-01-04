@@ -1,8 +1,13 @@
+body {
+    background-color: #1d112d;
+}
+
 /* topbar */
 .navbar-text {
     color:rgb(0, 255, 0) !important;
 }
 
+/* color de social */
 .socialIconos .nav-link {
     color: rgb(179, 20, 199) !important;
 }
@@ -12,20 +17,69 @@
     font-size: 3rem;
 }
 
+/* img en general */
 body img {
     width: 100%;
     height: 100%;
 }
+
+/* color de links en nav */
 .bottombar .nav-link {
     color: rgb(0, 255, 0) !important;
 }
 
-/* carousel */
-.carousel-inner {
-    height: 32rem;
+/* pag index */
+/* seccion trabajos recientes */
+.tituloTrabajos {
+    text-transform: uppercase;
+    color: rgb(0, 255, 0) ;
 }
 
+/* carousel */
 .carousel-item {
-    width: 100%;
-    object-fit: fill;
+    height: 640px;
 }
+
+/* seccion servicio */
+.titulo__servicio {
+    color: rgb(0, 255, 0);
+}
+
+.link-Lista {
+    color: rgb(0, 255, 0);
+}
+
+/* seccion contratame */
+.contratame {
+    text-transform: uppercase;
+}
+
+.seccion-contactame {
+    background-color: #523874;
+}
+
+
+/* pag servicios */
+/* titulo de pag */
+.texto-descripcion {
+    color: rgb(0, 255, 0);
+}
+
+.tituloServicio {
+    color: rgb(0, 255, 0);
+    text-transform: uppercase;
+}
+
+/* seccion pixel art */
+.tituloPixel {
+    color: rgb(0, 255, 0);
+}
+
+.col-sm-4 {
+    height: 320px;
+}
+
+.col-md-4 {
+    height: 320px;
+}
+
