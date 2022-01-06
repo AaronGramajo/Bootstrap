@@ -75,11 +75,121 @@ body img {
     color: rgb(0, 255, 0);
 }
 
+.textPixel {
+    color: rgb(0, 255, 0);
+}
+
 .col-sm-4 {
     height: 320px;
+}
+
+/* seccion modelos */
+.tituloModelo3D {
+    color: rgb(0, 255, 0);
+}
+
+.textModelo {
+    color: rgb(0, 255, 0);
+}
+
+/* seccion twitch */
+.tituloTwitch {
+    color: rgb(0, 255, 0);
+}
+
+.textoTwitch {
+    color: rgb(0, 255, 0);
 }
 
 .col-md-4 {
     height: 320px;
 }
 
+/* pag proyectos */
+.tituloP {
+    color: rgb(0, 255, 0);
+    text-transform: uppercase;
+}
+
+.textoP {
+    color: rgb(0, 255, 0);
+}
+
+._tituloG {
+    color: rgb(0, 255, 0);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+/* pag aboutme */
+.tituloSobreMi {
+    color: rgb(0, 255, 0);
+    text-transform: uppercase;
+}
+
+.textoSobreMi {
+    color: rgb(0, 255, 0);
+}
+
+.sobreMiCont {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgSobreMi1 {
+    background-image: url(../media/aboutMe1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 623px;
+}
+
+.imgSobreMi2 {
+    background-image: url(../media/aboutMe2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 623px;
+}
+
+/* pag contactame */
+.tituloContactame {
+    color: rgb(0, 255, 0);
+}
+
+.textoContactame {
+    color: rgb(0, 255, 0);
+}
+
+.email {
+    color: rgb(0, 255, 0);
+}
+
+.email_Link {
+    color: rgb(179, 20, 199);
+    text-decoration: none;
+}
+
+._tituloLegend {
+    color: rgb(0, 255, 0);
+    font-size: 2rem;
+}
+
+.labelNombre {
+    color: rgb(0, 255, 0);
+}
+
+.labelEmail {
+    color: rgb(0, 255, 0);
+}
+
+.labelMensaje {
+    color: rgb(0, 255, 0);
+}
+
+._imgContactame {
+    background-image: url(../media/contactame1.jpg);
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
