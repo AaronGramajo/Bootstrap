@@ -1,5 +1,10 @@
 body {
-    background-color: #1d112d;
+    background-image: linear-gradient(175deg,#110023,#775ab1);
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /* topbar */
@@ -13,8 +18,20 @@ body {
 }
 
 /* bottombar */
-.navbar-brand {
-    font-size: 3rem;
+@media screen and (max-width: 600px) {
+    .navbar-brand {
+        font-size: 2rem;
+        color: rgb(0, 255, 0) !important;
+
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .navbar-brand {
+        font-size: 3rem;
+        color: rgb(0, 255, 0) !important;
+
+    }
 }
 
 /* img en general */
@@ -36,8 +53,16 @@ body img {
 }
 
 /* carousel */
-.carousel-item {
-    height: 640px;
+@media screen and (max-width: 600px) {
+    .carousel-item {
+        height: 31rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .carousel-item {
+        height: 620px;
+    }
 }
 
 /* seccion servicio */
@@ -79,6 +104,27 @@ body img {
     color: rgb(0, 255, 0);
 }
 
+.pixelImg1 {
+    background-image: url(../media/pixelArt1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pixelImg2 {
+    background-image: url(../media/pixelArt2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.pixelImg3 {
+    background-image: url(../media/pixelArt3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .col-sm-4 {
     height: 320px;
 }
@@ -92,6 +138,27 @@ body img {
     color: rgb(0, 255, 0);
 }
 
+.modelImg1 {
+    background-image: url(../media/3dModel1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.modelImg2 {
+    background-image: url(../media/3dModel4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.modelImg3 {
+    background-image: url(../media/3dModel3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 /* seccion twitch */
 .tituloTwitch {
     color: rgb(0, 255, 0);
@@ -101,8 +168,25 @@ body img {
     color: rgb(0, 255, 0);
 }
 
-.col-md-4 {
-    height: 320px;
+.twitchImg1 {
+    background-image: url(../media/twitchEmote1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.twitchImg2 {
+    background-image: url(../media/twitchEmote2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.twitchImg3 {
+    background-image: url(../media/perfil1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 /* pag proyectos */
@@ -192,4 +276,11 @@ body img {
     height: 300px;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+/* footer */
+@media screen and (max-width: 600px) {
+    .offset-5 {
+        margin-left: auto;
+    }
 }
