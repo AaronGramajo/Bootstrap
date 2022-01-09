@@ -135,6 +135,9 @@ body img {
 /* titulo de pag */
 .texto-descripcion {
     color: $colorprincipal;
+    a {
+        color: $colorsecundaria;
+    }
 }
 
 .tituloServicio {

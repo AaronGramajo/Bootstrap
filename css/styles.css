@@ -121,6 +121,9 @@ body img {
 .texto-descripcion {
   color: lime;
 }
+.texto-descripcion a {
+  color: #b314c7;
+}
 
 .tituloServicio {
   color: lime;
