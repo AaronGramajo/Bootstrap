@@ -1,286 +1,350 @@
 body {
-    background-image: linear-gradient(175deg,#110023,#775ab1);
+  background-image: linear-gradient(175deg, #110023, #775ab1);
 }
 
 .container {
-    margin-right: auto;
-    margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* topbar */
-.navbar-text {
-    color:rgb(0, 255, 0) !important;
+.topbar {
+  height: 45px;
+}
+.topbar .custom-text {
+  color: lime !important;
+}
+.topbar .socialIconos {
+  margin: auto;
+  /* color de social */
+}
+.topbar .socialIconos .icono-lista {
+  list-style: none;
+}
+.topbar .socialIconos .iconos {
+  color: #b314c7 !important;
 }
 
-/* color de social */
-.socialIconos .nav-link {
-    color: rgb(179, 20, 199) !important;
+@media screen and (max-width: 340px) {
+  .custom-text {
+    font-size: 0.5rem;
+  }
 }
-
+@media screen and (min-width: 340px) and (max-width: 600px) {
+  .custom-text {
+    font-size: 0.7rem;
+  }
+}
 /* bottombar */
-@media screen and (max-width: 600px) {
-    .navbar-brand {
-        font-size: 2rem;
-        color: rgb(0, 255, 0) !important;
-
-    }
+@media screen and (max-width: 340px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: lime !important;
+  }
 }
-
+@media screen and (min-width: 340px) and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 2rem;
+    color: lime !important;
+  }
+}
 @media screen and (min-width: 600px) {
-    .navbar-brand {
-        font-size: 3rem;
-        color: rgb(0, 255, 0) !important;
-
-    }
+  .navbar-brand {
+    font-size: 3rem;
+    color: lime !important;
+  }
 }
-
 /* img en general */
 body img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 /* color de links en nav */
 .bottombar .nav-link {
-    color: rgb(0, 255, 0) !important;
+  color: lime !important;
 }
 
 /* pag index */
 /* seccion trabajos recientes */
 .tituloTrabajos {
-    text-transform: uppercase;
-    color: rgb(0, 255, 0) ;
+  text-transform: uppercase;
+  color: lime;
 }
 
 /* carousel */
-@media screen and (max-width: 600px) {
-    .carousel-item {
-        height: 31rem;
-    }
+@media screen and (max-width: 340px) {
+  .carousel-item {
+    height: 22rem;
+  }
 }
-
+@media screen and (min-width: 340px) and (max-width: 600px) {
+  .carousel-item {
+    height: 26rem;
+  }
+}
 @media screen and (min-width: 600px) {
-    .carousel-item {
-        height: 620px;
-    }
+  .carousel-item {
+    height: 620px;
+  }
 }
-
 /* seccion servicio */
 .titulo__servicio {
-    color: rgb(0, 255, 0);
+  color: lime;
+}
+
+.listaServicios {
+  padding: 0;
 }
 
 .link-Lista {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
+@media screen and (max-width: 600px) {
+  .listaServicios {
+    padding: 0;
+    gap: 40px;
+  }
+}
 /* seccion contratame */
 .contratame {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .seccion-contactame {
-    background-color: #523874;
+  background-color: #523874;
 }
-
 
 /* pag servicios */
 /* titulo de pag */
 .texto-descripcion {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .tituloServicio {
-    color: rgb(0, 255, 0);
-    text-transform: uppercase;
+  color: lime;
+  text-transform: uppercase;
 }
 
 /* seccion pixel art */
 .tituloPixel {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .textPixel {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .pixelImg1 {
-    background-image: url(../media/pixelArt1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../media/pixelArt1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .pixelImg2 {
-    background-image: url(../media/pixelArt2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../media/pixelArt2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .pixelImg3 {
-    background-image: url(../media/pixelArt3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../media/pixelArt3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .col-sm-4 {
-    height: 320px;
+  height: 320px;
 }
 
 /* seccion modelos */
 .tituloModelo3D {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .textModelo {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .modelImg1 {
-    background-image: url(../media/3dModel1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../media/3dModel1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .modelImg2 {
-    background-image: url(../media/3dModel4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../media/3dModel4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .modelImg3 {
-    background-image: url(../media/3dModel3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../media/3dModel3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* seccion twitch */
 .tituloTwitch {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .textoTwitch {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .twitchImg1 {
-    background-image: url(../media/twitchEmote1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../media/twitchEmote1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .twitchImg2 {
-    background-image: url(../media/twitchEmote2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../media/twitchEmote2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .twitchImg3 {
-    background-image: url(../media/perfil1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url(../media/perfil1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* pag proyectos */
 .tituloP {
-    color: rgb(0, 255, 0);
-    text-transform: uppercase;
+  color: lime;
+  text-transform: uppercase;
 }
 
 .textoP {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 ._tituloG {
-    color: rgb(0, 255, 0);
-    font-size: 3rem;
-    text-transform: uppercase;
+  color: lime;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+._imgP {
+  row-gap: 15px;
 }
 
 /* pag aboutme */
 .tituloSobreMi {
-    color: rgb(0, 255, 0);
-    text-transform: uppercase;
+  color: lime;
+  text-transform: uppercase;
 }
 
 .textoSobreMi {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .sobreMiCont {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .imgSobreMi1 {
+  background-image: url(../media/aboutMe1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 623px;
+}
+
+.imgSobreMi2 {
+  background-image: url(../media/aboutMe2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 623px;
+}
+
+@media screen and (max-width: 600px) {
+  .imgSobreMi1 {
     background-image: url(../media/aboutMe1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 623px;
-}
+    height: 317px;
+  }
 
-.imgSobreMi2 {
+  .imgSobreMi2 {
     background-image: url(../media/aboutMe2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 623px;
+    height: 317px;
+  }
 }
-
 /* pag contactame */
 .tituloContactame {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .textoContactame {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .email {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .email_Link {
-    color: rgb(179, 20, 199);
-    text-decoration: none;
+  color: #b314c7;
+  text-decoration: none;
 }
 
 ._tituloLegend {
-    color: rgb(0, 255, 0);
-    font-size: 2rem;
+  color: lime;
+  font-size: 2rem;
 }
 
 .labelNombre {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .labelEmail {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 .labelMensaje {
-    color: rgb(0, 255, 0);
+  color: lime;
 }
 
 ._imgContactame {
-    background-image: url(../media/contactame1.jpg);
-    height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url(../media/contactame1.jpg);
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* footer */
-@media screen and (max-width: 600px) {
-    .offset-5 {
-        margin-left: auto;
-    }
+footer {
+  background-color: black;
+  height: 83px;
 }
+footer .socialIconos {
+  margin: auto;
+  padding: 0;
+  /* color de social */
+}
+footer .socialIconos .icono-lista {
+  list-style: none;
+}
+footer .socialIconos .iconos {
+  color: #b314c7 !important;
+}
+
+/*# sourceMappingURL=styles.css.map */

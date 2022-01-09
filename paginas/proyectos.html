@@ -15,28 +15,32 @@
     <!-- navbar -->
     <header>
         <!-- topbar -->
-        <nav class="navbar navbar-expand-sm bg-black navbar-dark topbar">
-            <div class="container-fluid justify-content-end topbarIconos">
-                <span class="navbar-text p-4">CUSTOM TWITCH EMOTES | TOP EMOTE ARTIST</span>
-                <ul class="navbar-nav socialIconos">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
+        <div class="container-fluid d-flex align-items-center justify-content-end gap-3 bg-black topbar">
+            <!-- texto -->
+            <div class="">
+                <span class="custom-text">CUSTOM TWITCH EMOTES | TOP EMOTE ARTIST </span>
+            </div>
+            <div class="d-flex flex-row">
+                <!-- iconos -->
+                <ul class="socialIconos d-flex flex-row gap-3">
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square"></i></a>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope-square"></i></a>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope-square"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://twitch.tv" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitch"></i></a>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://twitch.tv" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitch"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="http://#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp-square"></i></a>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp-square"></i></a>
                     </li>
                 </ul>
             </div>
-        </nav>
+        </div>
         <!--bottombar-->
         <nav class="navbar navbar-expand-md navbar-light bottombar">
             <div class="container-fluid">
@@ -83,59 +87,196 @@
         <!-- galeria de img -->
         <div class="_imgP row justify-content-lg-center">
             <div class="galeria__item galeria__item1 col-lg-3">
-                <img src="../media/proyecto1.jpg" class="gallery__img" alt="">
+                <img src="../media/proyecto1.jpg" class="gallery__img" data-bs-toggle="modal" data-bs-target="#myModal" alt="">
+                <!-- model para ver img -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <img src="../media/proyecto1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="galeria__item galeria__item2 col-lg-3">
-                <img src="../media/proyecto2.jpg" class="gallery__img" alt="">
+                <img src="../media/proyecto2.jpg" class="gallery__img" data-bs-toggle="modal" data-bs-target="#myModal1" alt="">
+                <!-- model para ver img -->
+                <div class="modal fade" id="myModal1">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <img src="../media/proyecto2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="galeria__item galeria__item3 col-lg-3">
-                <img src="../media/proyecto3.jpg" class="gallery__img" alt="">
+                <img src="../media/proyecto3.jpg" class="gallery__img" data-bs-toggle="modal" data-bs-target="#myModal2" alt="">
+                <!-- model para ver img -->
+                <div class="modal fade" id="myModal2">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <img src="../media/proyecto3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="galeria__item galeria__item4 col-lg-3">
-                <img src="../media/proyecto4.jpg" class="gallery__img" alt="">
+                <img src="../media/proyecto4.jpg" class="gallery__img" data-bs-toggle="modal" data-bs-target="#myModal3" alt="">
+                <!-- model para ver img -->
+                <div class="modal fade" id="myModal3">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <img src="../media/proyecto4.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="galeria__item galeria__item5 col-lg-3">
-                <img src="../media/proyecto5.jpg" class="gallery__img" alt="">
+                <img src="../media/proyecto5.jpg" class="gallery__img" data-bs-toggle="modal" data-bs-target="#myModal4" alt="">
+                <!-- model para ver img -->
+                <div class="modal fade" id="myModal4">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <img src="../media/proyecto5.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="galeria__item galeria__item6 col-lg-3">
-                <img src="../media/proyecto7.jpg" class="gallery__img" alt="">
+                <img src="../media/proyecto7.jpg" class="gallery__img" data-bs-toggle="modal" data-bs-target="#myModal5" alt="">
+                <!-- model para ver img -->
+                <div class="modal fade" id="myModal5">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <img src="../media/proyecto7.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="galeria__item galeria__item7 col-lg-3">
-                <img src="../media/proyecto6.jpg" class="gallery__img" alt="">
+                <img src="../media/proyecto6.jpg" class="gallery__img" data-bs-toggle="modal" data-bs-target="#myModal6" alt="">
+                <!-- model para ver img -->
+                <div class="modal fade" id="myModal6">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <img src="../media/proyecto6.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="galeria__item galeria__item8 col-lg-3">
-                <img src="../media/proyecto8.jpg" class="gallery__img" alt="">
+                <img src="../media/proyecto8.jpg" class="gallery__img" data-bs-toggle="modal" data-bs-target="#myModal7" alt="">
+                <!-- model para ver img -->
+                <div class="modal fade" id="myModal7">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <img src="../media/proyecto8.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-dark text-white text-center" id="footer">
+    <!-- footer -->
+    <footer class="text-white text-center" id="footer">
         <div id="footer-bottom">
-            <nav class="navbar navbar-expand-sm bg-black navbar-dark">
-                <div class="container-fluid footer">
-                    <div class="offset-5 footer-center">
-                        <p>copyright &copy; todos los derechos reservados</p>
-                        <p>Developed by Aaron Gramajo</p>
-                    </div>
-                    <ul class="navbar-nav socialIconos">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope-square"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://twitch.tv" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitch"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="http://#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp-square"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <!-- texto -->
+            <div class="">
+                <span class="custom-text text-center">copyright &copy; todos los derechos reservados</span><br>
+                <span class="custom-text text-center">Devolped by Aaron Gramajo</span>
+            </div>
+            <div class="d-flex flex-row">
+                <!-- iconos -->
+                <ul class="socialIconos d-flex flex-row gap-3">
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square"></i></a>
+                    </li>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope-square"></i></a>
+                    </li>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://twitch.tv" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitch"></i></a>
+                    </li>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp-square"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
 
