@@ -89,16 +89,12 @@ body img {
   }
 }
 /* seccion servicio */
-.titulo__servicio {
+.titulo__servicio, .link-Lista {
   color: lime;
 }
 
 .listaServicios {
   padding: 0;
-}
-
-.link-Lista {
-  color: lime;
 }
 
 @media screen and (max-width: 600px) {
@@ -131,29 +127,25 @@ body img {
 }
 
 /* seccion pixel art */
-.tituloPixel {
+.tituloPixel, .textPixel {
   color: lime;
 }
 
-.textPixel {
-  color: lime;
-}
-
-.pixelImg1 {
+.pixelArt1-pic {
   background-image: url(../media/pixelArt1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.pixelImg2 {
+.pixelArt2-pic {
   background-image: url(../media/pixelArt2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.pixelImg3 {
+.pixelArt3-pic {
   background-image: url(../media/pixelArt3.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -165,59 +157,51 @@ body img {
 }
 
 /* seccion modelos */
-.tituloModelo3D {
+.tituloModelo3D, .textModelo {
   color: lime;
 }
 
-.textModelo {
-  color: lime;
-}
-
-.modelImg1 {
-  background-image: url(../media/3dModel1.jpg);
+.model3D1-foto {
+  background-image: url(../media/model3D1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.modelImg2 {
-  background-image: url(../media/3dModel4.jpg);
+.model3D4-foto {
+  background-image: url(../media/model3D4.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.modelImg3 {
-  background-image: url(../media/3dModel3.jpg);
+.model3D3-foto {
+  background-image: url(../media/model3D3.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 /* seccion twitch */
-.tituloTwitch {
+.tituloTwitch, .textoTwitch {
   color: lime;
 }
 
-.textoTwitch {
-  color: lime;
-}
-
-.twitchImg1 {
+.twitchEmote1-emote {
   background-image: url(../media/twitchEmote1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.twitchImg2 {
+.twitchEmote2-emote {
   background-image: url(../media/twitchEmote2.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.twitchImg3 {
+.perfil1-emote {
   background-image: url(../media/perfil1.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -225,13 +209,9 @@ body img {
 }
 
 /* pag proyectos */
-.tituloP {
+.tituloP, .textoP {
   color: lime;
   text-transform: uppercase;
-}
-
-.textoP {
-  color: lime;
 }
 
 ._tituloG {
@@ -259,7 +239,7 @@ body img {
   margin-right: auto;
 }
 
-.imgSobreMi1 {
+.aboutMe1-about {
   background-image: url(../media/aboutMe1.jpg);
   background-size: cover;
   background-position: center;
@@ -267,7 +247,7 @@ body img {
   height: 623px;
 }
 
-.imgSobreMi2 {
+.aboutMe2-about {
   background-image: url(../media/aboutMe2.jpg);
   background-size: cover;
   background-position: center;
@@ -276,7 +256,7 @@ body img {
 }
 
 @media screen and (max-width: 600px) {
-  .imgSobreMi1 {
+  .aboutMe1-about {
     background-image: url(../media/aboutMe1.jpg);
     background-size: cover;
     background-position: center;
@@ -284,7 +264,7 @@ body img {
     height: 317px;
   }
 
-  .imgSobreMi2 {
+  .aboutMe2-about {
     background-image: url(../media/aboutMe2.jpg);
     background-size: cover;
     background-position: center;
@@ -293,15 +273,7 @@ body img {
   }
 }
 /* pag contactame */
-.tituloContactame {
-  color: lime;
-}
-
-.textoContactame {
-  color: lime;
-}
-
-.email {
+.tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje {
   color: lime;
 }
 
@@ -313,18 +285,6 @@ body img {
 ._tituloLegend {
   color: lime;
   font-size: 2rem;
-}
-
-.labelNombre {
-  color: lime;
-}
-
-.labelEmail {
-  color: lime;
-}
-
-.labelMensaje {
-  color: lime;
 }
 
 ._imgContactame {

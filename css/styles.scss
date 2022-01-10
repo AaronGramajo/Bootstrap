@@ -102,16 +102,12 @@ body img {
 }
 
 /* seccion servicio */
-.titulo__servicio {
+.titulo__servicio, .link-Lista {
     color: $colorprincipal;
 }
 
 .listaServicios {
     padding: 0;
-}
-
-.link-Lista {
-    color: $colorprincipal;
 }
 
 @media screen and (max-width:600px) {
@@ -146,33 +142,17 @@ body img {
 }
 
 /* seccion pixel art */
-.tituloPixel {
+.tituloPixel , .textPixel {
     color: $colorprincipal;
 }
 
-.textPixel {
-    color: $colorprincipal;
-}
-
-.pixelImg1 {
-    background-image: url(../media/pixelArt1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.pixelImg2 {
-    background-image: url(../media/pixelArt2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.pixelImg3 {
-    background-image: url(../media/pixelArt3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+@each $pixel in pixelArt1, pixelArt2, pixelArt3 {
+    .#{$pixel}-pic {
+        background-image: url(../media/#{$pixel}.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 .col-sm-4 {
@@ -180,73 +160,37 @@ body img {
 }
 
 /* seccion modelos */
-.tituloModelo3D {
+.tituloModelo3D, .textModelo {
     color: $colorprincipal;
 }
 
-.textModelo {
-    color: $colorprincipal;
-}
-
-.modelImg1 {
-    background-image: url(../media/3dModel1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.modelImg2 {
-    background-image: url(../media/3dModel4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.modelImg3 {
-    background-image: url(../media/3dModel3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+@each $model in model3D1, model3D4, model3D3 {
+    .#{$model}-foto {
+        background-image: url(../media/#{$model}.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 /* seccion twitch */
-.tituloTwitch {
+.tituloTwitch, .textoTwitch {
     color: $colorprincipal;
 }
 
-.textoTwitch {
-    color: $colorprincipal;
-}
-
-.twitchImg1 {
-    background-image: url(../media/twitchEmote1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.twitchImg2 {
-    background-image: url(../media/twitchEmote2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.twitchImg3 {
-    background-image: url(../media/perfil1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+@each $twitch in twitchEmote1, twitchEmote2, perfil1 {
+    .#{$twitch}-emote {
+        background-image: url(../media/#{$twitch}.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
 /* pag proyectos */
-.tituloP {
+.tituloP, .textoP {
     color: $colorprincipal;
     text-transform: uppercase;
-}
-
-.textoP {
-    color: $colorprincipal;
 }
 
 ._tituloG {
@@ -274,50 +218,30 @@ body img {
     margin-right: auto;
 }
 
-.imgSobreMi1 {
-    background-image: url(../media/aboutMe1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 623px;
-}
-
-.imgSobreMi2 {
-    background-image: url(../media/aboutMe2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 623px;
+@each $about in aboutMe1, aboutMe2 {
+    .#{$about}-about {
+        background-image: url(../media/#{$about}.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 623px;
+    }
 }
 
 @media screen and (max-width:600px) {
-    .imgSobreMi1 {
-        background-image: url(../media/aboutMe1.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 317px;
-    }
-    
-    .imgSobreMi2 {
-        background-image: url(../media/aboutMe2.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 317px;
+    @each $about in aboutMe1, aboutMe2 {
+        .#{$about}-about {
+            background-image: url(../media/#{$about}.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 317px;
+        }
     }
 }
 
 /* pag contactame */
-.tituloContactame {
-    color: $colorprincipal;
-}
-
-.textoContactame {
-    color: $colorprincipal;
-}
-
-.email {
+.tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje {
     color: $colorprincipal;
 }
 
@@ -329,18 +253,6 @@ body img {
 ._tituloLegend {
     color: $colorprincipal;
     font-size: 2rem;
-}
-
-.labelNombre {
-    color: $colorprincipal;
-}
-
-.labelEmail {
-    color: $colorprincipal;
-}
-
-.labelMensaje {
-    color: $colorprincipal;
 }
 
 ._imgContactame {
