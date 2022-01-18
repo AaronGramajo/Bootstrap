@@ -30,40 +30,6 @@ body {
     }
 }
 
-@media screen and (max-width:340px) {
-    .custom-text {
-        font-size: .5rem;
-    }
-}
-
-@media screen and (min-width:340px) and (max-width:600px) {
-    .custom-text {
-        font-size: .7rem;
-    }
-}
-
-/* bottombar */
-@media screen and (max-width:340px) {
-    .navbar-brand {
-        font-size: 1.5rem;
-        color: $colorprincipal !important;
-    }
-}
-
-@media screen and (min-width:340px) and (max-width:600px) {
-    .navbar-brand {
-        font-size: 2rem;
-        color: $colorprincipal !important;
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .navbar-brand {
-        font-size: 3rem;
-        color: $colorprincipal !important;
-    }
-}
-
 /* img en general */
 body img {
     width: 100%;
@@ -82,25 +48,6 @@ body img {
     color: $colorprincipal;
 }
 
-/* carousel */
-@media screen and (max-width:340px) {
-    .carousel-item {
-        height: 22rem;
-    }
-}
-
-@media screen and (min-width:340px) and (max-width:600px) {
-    .carousel-item {
-        height: 26rem;
-    }
-}
-
-@media screen and (min-width: 600px) {
-    .carousel-item {
-        height: 620px;
-    }
-}
-
 /* seccion servicio */
 .titulo__servicio, .link-Lista {
     color: $colorprincipal;
@@ -108,13 +55,6 @@ body img {
 
 .listaServicios {
     padding: 0;
-}
-
-@media screen and (max-width:600px) {
-    .listaServicios {
-        padding: 0;
-        gap: 40px;
-    }
 }
 
 /* seccion contratame */
@@ -228,18 +168,6 @@ body img {
     }
 }
 
-@media screen and (max-width:600px) {
-    @each $about in aboutMe1, aboutMe2 {
-        .#{$about}-about {
-            background-image: url(../media/#{$about}.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 317px;
-        }
-    }
-}
-
 /* pag contactame */
 .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje {
     color: $colorprincipal;
@@ -268,7 +196,6 @@ footer {
     .socialIconos {
         margin: auto;
         padding: 0;
-    
         .icono-lista {
             list-style: none;
         }
@@ -276,5 +203,65 @@ footer {
         .iconos {
             color: $colorsecundaria !important;
         }
+    }
+}
+
+@media screen and (max-width:340px) {
+    .custom-text {
+        font-size: .5rem;
+    }
+    /* bottombar */
+    .navbar-brand {
+        font-size: 1.5rem;
+        color: $colorprincipal !important;
+    }
+    /* carousel */
+    .carousel-item {
+        height: 22rem;
+    }
+}
+
+@media screen and (min-width:340px) and (max-width:600px) {
+    .custom-text {
+        font-size: .7rem;
+    }
+    /* bottombar */
+    .navbar-brand {
+        font-size: 2rem;
+        color: $colorprincipal !important;
+    }
+    /* carousel */
+    .carousel-item {
+        height: 26rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    /* seccion servicio */
+    .listaServicios {
+        padding: 0;
+        gap: 40px;
+    }
+    /* pag aboutme */
+    @each $about in aboutMe1, aboutMe2 {
+        .#{$about}-about {
+            background-image: url(../media/#{$about}.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 317px;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    /* bottombar */
+    .navbar-brand {
+        font-size: 3rem;
+        color: $colorprincipal !important;
+    }
+    /* carousel */
+    .carousel-item {
+        height: 620px;
     }
 }
