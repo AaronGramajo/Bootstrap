@@ -1,6 +1,6 @@
 $colorprincipal: rgb(0, 255, 0);
 $colorsecundaria: rgb(179, 20, 199);
-$colorbackground: linear-gradient(175deg,#110023,#775ab1);
+$colorbackground: linear-gradient(360deg,#110023,#775ab1);
 
 body {
     background-image: $colorbackground;
@@ -46,6 +46,10 @@ body img {
 .tituloTrabajos {
     text-transform: uppercase;
     color: $colorprincipal;
+}
+
+.carousel {
+    max-width: 885px;
 }
 
 /* seccion servicio */
@@ -131,6 +135,10 @@ body img {
 .tituloP, .textoP {
     color: $colorprincipal;
     text-transform: uppercase;
+}
+
+.linkP {
+    color: $colorsecundaria;
 }
 
 ._tituloG {
