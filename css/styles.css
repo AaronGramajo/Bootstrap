@@ -31,9 +31,19 @@ body img {
   height: 100%;
 }
 
+/*bottombar*/
 /* color de links en nav */
-.bottombar .nav-link {
+.nav-item {
+  margin-right: 15px;
+}
+
+.nav-link {
   color: lime !important;
+  padding: 0 !important;
+}
+
+.nav-link:hover {
+  color: #b314c7 !important;
 }
 
 /* pag index */
@@ -205,52 +215,6 @@ footer .socialIconos {
 footer .socialIconos .icono-lista {
   list-style: none;
 }
-/*delete later*/
-/*no tengo uso para mapas por lo que veo pero incluire este aca para el desafio*/
-/*el bucle para usar el mapa*/
-.btn--red1 {
-  background-color: red;
-  height: 200px;
-  width: 500px;
-  border: 2px solid #111;
-  text-align: center;
-  font-size: 50px;
-  line-height: 200px;
-  color: #fff;
-  text-transform: uppercase;
-  text-shadow: 0 0 5px #f00;
-  font-family: sans-serif;
-}
-
-.btn--red2 {
-  background-color: blue;
-  height: 200px;
-  width: 500px;
-  border: 2px solid #111;
-  text-align: center;
-  font-size: 50px;
-  line-height: 200px;
-  color: #fff;
-  text-transform: uppercase;
-  text-shadow: 0 0 5px #f00;
-  font-family: sans-serif;
-}
-
-.btn--red3 {
-  background-color: green;
-  height: 200px;
-  width: 500px;
-  border: 2px solid #111;
-  text-align: center;
-  font-size: 50px;
-  line-height: 200px;
-  color: #fff;
-  text-transform: uppercase;
-  text-shadow: 0 0 5px #f00;
-  font-family: sans-serif;
-}
-
-/*end delete*/
 @media screen and (max-width: 340px) {
   .custom-text {
     font-size: 0.5rem;
@@ -317,6 +281,21 @@ footer .socialIconos .icono-lista {
   /* carousel */
   .carousel-item {
     height: 620px;
+  }
+
+  .nav-item::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background-color: lime;
+    position: absolute;
+    top: 30px;
+    width: 0%;
+    transition: all ease-in-out 200ms;
+  }
+
+  .nav-item:hover::before {
+    width: 3rem;
   }
 }
 
