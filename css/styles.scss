@@ -74,28 +74,32 @@ body img {
 /* pag servicios */
 /* titulo de pag */
 .texto-descripcion {
-    color: $colorprincipal;
+    @extend .titulo__servicio;
     a {
         color: $colorsecundaria;
     }
 }
 
 .tituloServicio {
-    color: $colorprincipal;
-    text-transform: uppercase;
+    @extend .tituloTrabajos;
 }
 
 /* seccion pixel art */
 .tituloPixel , .textPixel {
-    color: $colorprincipal;
+    @extend .titulo__servicio;
+}
+
+/*mi mixin */
+@mixin background($position, $repeat, $bsize) {
+    background-position: $position;
+    background-repeat: $repeat;
+    background-size: $bsize;
 }
 
 @each $pixel in pixelArt1, pixelArt2, pixelArt3 {
     .#{$pixel}-pic {
         background-image: url(../media/#{$pixel}.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        @include background(center, no-repeat, contain);
     }
 }
 
@@ -105,36 +109,31 @@ body img {
 
 /* seccion modelos */
 .tituloModelo3D, .textModelo {
-    color: $colorprincipal;
+    @extend .titulo__servicio;
 }
 
 @each $model in model3D1, model3D4, model3D3 {
     .#{$model}-foto {
         background-image: url(../media/#{$model}.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        @include background(center, no-repeat, contain);
     }
 }
 
 /* seccion twitch */
 .tituloTwitch, .textoTwitch {
-    color: $colorprincipal;
+    @extend .titulo__servicio;
 }
 
 @each $twitch in twitchEmote1, twitchEmote2, perfil1 {
     .#{$twitch}-emote {
         background-image: url(../media/#{$twitch}.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
+        @include background(center, no-repeat, contain);
     }
 }
 
 /* pag proyectos */
 .tituloP, .textoP {
-    color: $colorprincipal;
-    text-transform: uppercase;
+    @extend .tituloTrabajos;
 }
 
 .linkP {
@@ -142,9 +141,8 @@ body img {
 }
 
 ._tituloG {
-    color: $colorprincipal;
+    @extend .tituloTrabajos;
     font-size: 3rem;
-    text-transform: uppercase;
 }
 
 ._imgP {
@@ -153,12 +151,11 @@ body img {
 
 /* pag aboutme */
 .tituloSobreMi {
-    color: $colorprincipal;
-    text-transform: uppercase;
+    @extend .tituloTrabajos;
 }
 
 .textoSobreMi {
-    color: $colorprincipal;
+    @extend .titulo__servicio;
 }
 
 .sobreMiCont {
@@ -169,25 +166,23 @@ body img {
 @each $about in aboutMe1, aboutMe2 {
     .#{$about}-about {
         background-image: url(../media/#{$about}.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        @include background(center, no-repeat, cover);
         height: 623px;
     }
 }
 
 /* pag contactame */
 .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje {
-    color: $colorprincipal;
+    @extend .titulo__servicio;
 }
 
 .email_Link {
-    color: $colorsecundaria;
+    @extend .linkP;
     text-decoration: none;
 }
 
 ._tituloLegend {
-    color: $colorprincipal;
+    @extend .titulo__servicio;
     font-size: 2rem;
 }
 
@@ -209,11 +204,34 @@ footer {
         }
         /* color de social */
         .iconos {
-            color: $colorsecundaria !important;
+            @extend .linkP;
         }
     }
 }
-
+/*delete later*/
+/*no tengo uso para mapas por lo que veo pero incluire este aca para el desafio*/
+$redes: (
+    red1: red,
+    red2: blue,
+    red3: green,
+);
+/*el bucle para usar el mapa*/
+@each $red, $fonts in $redes {
+    .btn--#{$red} {
+        background-color: $fonts;
+        height: 200px;
+        width: 500px;
+        border: 2px solid #111;
+        text-align: center;
+        font-size: 50px;
+        line-height: 200px;
+        color: #fff;
+        text-transform: uppercase;
+        text-shadow: 0 0 5px #f00;
+        font-family: sans-serif;
+    }
+}
+/*end delete*/
 @media screen and (max-width:340px) {
     .custom-text {
         font-size: .5rem;
@@ -254,9 +272,7 @@ footer {
     @each $about in aboutMe1, aboutMe2 {
         .#{$about}-about {
             background-image: url(../media/#{$about}.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            @include background(center, no-repeat, cover);
             height: 317px;
         }
     }

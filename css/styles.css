@@ -38,7 +38,7 @@ body img {
 
 /* pag index */
 /* seccion trabajos recientes */
-.tituloTrabajos {
+.tituloTrabajos, .tituloSobreMi, ._tituloG, .tituloP, .textoP, .tituloServicio {
   text-transform: uppercase;
   color: lime;
 }
@@ -48,7 +48,7 @@ body img {
 }
 
 /* seccion servicio */
-.titulo__servicio, .link-Lista {
+.titulo__servicio, ._tituloLegend, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, .textoSobreMi, .tituloTwitch, .textoTwitch, .tituloModelo3D, .textModelo, .tituloPixel, .textPixel, .texto-descripcion, .link-Lista {
   color: lime;
 }
 
@@ -67,23 +67,12 @@ body img {
 
 /* pag servicios */
 /* titulo de pag */
-.texto-descripcion {
-  color: lime;
-}
 .texto-descripcion a {
   color: #b314c7;
 }
 
-.tituloServicio {
-  color: lime;
-  text-transform: uppercase;
-}
-
 /* seccion pixel art */
-.tituloPixel, .textPixel {
-  color: lime;
-}
-
+/*mi mixin */
 .pixelArt1-pic {
   background-image: url(../media/pixelArt1.jpg);
   background-position: center;
@@ -110,10 +99,6 @@ body img {
 }
 
 /* seccion modelos */
-.tituloModelo3D, .textModelo {
-  color: lime;
-}
-
 .model3D1-foto {
   background-image: url(../media/model3D1.jpg);
   background-position: center;
@@ -136,10 +121,6 @@ body img {
 }
 
 /* seccion twitch */
-.tituloTwitch, .textoTwitch {
-  color: lime;
-}
-
 .twitchEmote1-emote {
   background-image: url(../media/twitchEmote1.jpg);
   background-position: center;
@@ -162,19 +143,12 @@ body img {
 }
 
 /* pag proyectos */
-.tituloP, .textoP {
-  color: lime;
-  text-transform: uppercase;
-}
-
-.linkP {
+.linkP, footer .socialIconos .iconos, .email_Link {
   color: #b314c7;
 }
 
 ._tituloG {
-  color: lime;
   font-size: 3rem;
-  text-transform: uppercase;
 }
 
 ._imgP {
@@ -182,15 +156,6 @@ body img {
 }
 
 /* pag aboutme */
-.tituloSobreMi {
-  color: lime;
-  text-transform: uppercase;
-}
-
-.textoSobreMi {
-  color: lime;
-}
-
 .sobreMiCont {
   margin-left: auto;
   margin-right: auto;
@@ -198,32 +163,26 @@ body img {
 
 .aboutMe1-about {
   background-image: url(../media/aboutMe1.jpg);
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   height: 623px;
 }
 
 .aboutMe2-about {
   background-image: url(../media/aboutMe2.jpg);
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   height: 623px;
 }
 
 /* pag contactame */
-.tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje {
-  color: lime;
-}
-
 .email_Link {
-  color: #b314c7;
   text-decoration: none;
 }
 
 ._tituloLegend {
-  color: lime;
   font-size: 2rem;
 }
 
@@ -246,10 +205,52 @@ footer .socialIconos {
 footer .socialIconos .icono-lista {
   list-style: none;
 }
-footer .socialIconos .iconos {
-  color: #b314c7 !important;
+/*delete later*/
+/*no tengo uso para mapas por lo que veo pero incluire este aca para el desafio*/
+/*el bucle para usar el mapa*/
+.btn--red1 {
+  background-color: red;
+  height: 200px;
+  width: 500px;
+  border: 2px solid #111;
+  text-align: center;
+  font-size: 50px;
+  line-height: 200px;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #f00;
+  font-family: sans-serif;
 }
 
+.btn--red2 {
+  background-color: blue;
+  height: 200px;
+  width: 500px;
+  border: 2px solid #111;
+  text-align: center;
+  font-size: 50px;
+  line-height: 200px;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #f00;
+  font-family: sans-serif;
+}
+
+.btn--red3 {
+  background-color: green;
+  height: 200px;
+  width: 500px;
+  border: 2px solid #111;
+  text-align: center;
+  font-size: 50px;
+  line-height: 200px;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #f00;
+  font-family: sans-serif;
+}
+
+/*end delete*/
 @media screen and (max-width: 340px) {
   .custom-text {
     font-size: 0.5rem;
@@ -292,17 +293,17 @@ footer .socialIconos .iconos {
   /* pag aboutme */
   .aboutMe1-about {
     background-image: url(../media/aboutMe1.jpg);
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 317px;
   }
 
   .aboutMe2-about {
     background-image: url(../media/aboutMe2.jpg);
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     height: 317px;
   }
 }
