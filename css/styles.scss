@@ -1,7 +1,7 @@
 $colorprincipal: rgb(0, 255, 0);
 $colorsecundaria: rgb(179, 20, 199);
 $colorbackground: linear-gradient(360deg,#110023,#775ab1);
-
+$colororange: #ff8c28;
 body {
     background-image: $colorbackground;
 }
@@ -26,6 +26,7 @@ body {
         /* color de social */
         .iconos {
             color: $colorsecundaria !important;
+            position: relative;
         }
     }
 }
@@ -35,19 +36,25 @@ body img {
     width: 100%;
     height: 100%;
 }
+
 /*bottombar*/
-/* color de links en nav */
+.navbar-brand {
+    color: $colorprincipal !important;
+}
+
 .nav-item {
     margin-right: 15px;
 }
 
+/* color de links en nav */
 .nav-link {
     color: $colorprincipal !important;
     padding: 0 !important;
+    position: relative;
 }
 
 .nav-link:hover {
-    color: $colorsecundaria !important;
+    color: $colororange !important;
 }
 
 /* pag index */
@@ -66,6 +73,11 @@ body img {
     color: $colorprincipal;
 }
 
+/*hover de links servicios*/
+.link-Lista:hover {
+    color:$colororange
+}
+
 .listaServicios {
     padding: 0;
 }
@@ -73,6 +85,11 @@ body img {
 /* seccion contratame */
 .contratame {
     text-transform: uppercase;
+}
+
+.btn-success {
+    background-color: $colororange !important;
+    border-color: $colororange !important;
 }
 
 .seccion-contactame {
@@ -84,8 +101,10 @@ body img {
 /* titulo de pag */
 .texto-descripcion {
     @extend .titulo__servicio;
-    a {
-        color: $colorsecundaria;
+    .fancy-link {
+        color: $colororange;
+        position: relative;
+        text-decoration: none;
     }
 }
 
@@ -145,8 +164,15 @@ body img {
     @extend .tituloTrabajos;
 }
 
+/*link proyecto*/
 .linkP {
-    color: $colorsecundaria;
+    color: $colororange;
+    text-decoration: none;
+    position: relative;
+}
+
+.linkP:hover {
+    color: $colororange
 }
 
 ._tituloG {
@@ -213,11 +239,12 @@ footer {
         }
         /* color de social */
         .iconos {
-            @extend .linkP;
+            color: $colorsecundaria;
         }
     }
 }
 
+/*media queries*/
 @media screen and (max-width:340px) {
     .custom-text {
         font-size: .5rem;
@@ -225,7 +252,6 @@ footer {
     /* bottombar */
     .navbar-brand {
         font-size: 1.5rem;
-        color: $colorprincipal !important;
     }
     /* carousel */
     .carousel-item {
@@ -240,7 +266,6 @@ footer {
     /* bottombar */
     .navbar-brand {
         font-size: 2rem;
-        color: $colorprincipal !important;
     }
     /* carousel */
     .carousel-item {
@@ -268,27 +293,105 @@ footer {
     /* bottombar */
     .navbar-brand {
         font-size: 3rem;
-        color: $colorprincipal !important;
     }
     /* carousel */
     .carousel-item {
         height: 620px;
     }
 
-    .nav-item::before {
+    /*topbar effecto*/
+    .effecto-icono:hover {
+        transform: translateY(-10px);
+        transition: all ease-in-out 200ms;
+    }
+
+    /*nav effecto*/
+    .nav-link::before {
         content: '';
-            display: block;
-            height: 5px;
+        position: absolute;
+        display: block;
+        height: 5px;
         
-            background-color: $colorprincipal;
-            position: absolute;
-            top: 30px;
-            width: 0%;
+        background-color: $colorprincipal;
+        bottom: 23px;
+        width: 0%;
         
-            transition: all ease-in-out 200ms;
+        transition: all ease-in-out 200ms;
     }
     
-    .nav-item:hover::before {
-        width: 3rem;
+    .nav-link:hover::before {
+        width: 100%;
+    }
+
+    /*effecto link*/
+    .fancy-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height:2px;
+        background: $colororange;
+
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform ease-in 250ms;
+    }
+
+    .fancy-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    .linkP::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height:2px;
+        background: $colororange;
+
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform ease-in 250ms;
+    }
+
+    .linkP:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    /*fin effecto link*/
+
+    /*effecto logo*/
+    .navbar-brand:hover {
+        transform: translate(-10px,-20px);
+        text-shadow: 0px 0px 0 #899CD5, 1px 1px 0 #8194CD, 2px 2px 0 #788BC4, 3px 3px 0 #6F82BB, 4px 4px 0 #677AB3, 5px 5px 0 #5E71AA, 6px 6px 0 #5568A1, 7px 7px 0 #4C5F98, 8px 8px 0 #445790, 9px 9px 0 #3B4E87, 10px 10px 0 #32457E, 11px 11px 0 #2A3D76, 12px 12px 0 #21346D, 13px 13px 0 #182B64, 14px 14px 0 #0F225B, 15px 15px 0 #071A53, 16px 16px 0 #02114A, 17px 17px 0 #0B0841, 18px 18px 0 #130039, 19px 19px 0 #1C0930, 20px 20px 0 #251227, 21px 21px 20px rgba(0,0,0,1), 21px 21px 1px rgba(0,0,0,0.5), 0px 0px 20px rgba(0,0,0,.2);
+        transition: all 300ms ease-in;
+    }
+
+    /*effecto de boton*/
+    .btn {
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 200ms ease-in;
+    }
+
+    .btn:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 }
