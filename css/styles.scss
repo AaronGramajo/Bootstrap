@@ -1,3 +1,7 @@
+html{
+    overflow-x: hidden;
+}
+
 $colorprincipal: rgb(0, 255, 0);
 $colorsecundaria: rgb(179, 20, 199);
 $colorbackground: linear-gradient(360deg,#110023,#775ab1);
@@ -184,6 +188,12 @@ body img {
     row-gap: 15px;
 }
 
+.galeria__item:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: transform 500ms ease;
+}
+
 /* pag aboutme */
 .tituloSobreMi {
     @extend .tituloTrabajos;
@@ -196,14 +206,6 @@ body img {
 .sobreMiCont {
     margin-left: auto;
     margin-right: auto;
-}
-
-@each $about in aboutMe1, aboutMe2 {
-    .#{$about}-about {
-        background-image: url(../media/#{$about}.jpg);
-        @include background(center, no-repeat, cover);
-        height: 623px;
-    }
 }
 
 /* pag contactame */
@@ -279,14 +281,6 @@ footer {
         padding: 0;
         gap: 40px;
     }
-    /* pag aboutme */
-    @each $about in aboutMe1, aboutMe2 {
-        .#{$about}-about {
-            background-image: url(../media/#{$about}.jpg);
-            @include background(center, no-repeat, cover);
-            height: 317px;
-        }
-    }
 }
 
 @media screen and (min-width: 600px) {
@@ -299,6 +293,7 @@ footer {
         height: 620px;
     }
 
+    /*animaciones*/
     /*topbar efecto*/
     .effecto-icono:hover i {
         transform: translateY(-10px);

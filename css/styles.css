@@ -1,4 +1,9 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#110023), to(#775ab1));
   background-image: linear-gradient(360deg, #110023, #775ab1);
 }
 
@@ -11,16 +16,20 @@ body {
 .topbar {
   height: 45px;
 }
+
 .topbar .custom-text {
   color: lime !important;
 }
+
 .topbar .socialIconos {
   margin: auto;
   /* color de social */
 }
+
 .topbar .socialIconos .icono-lista {
   list-style: none;
 }
+
 .topbar .socialIconos .iconos {
   color: #b314c7 !important;
   position: relative;
@@ -54,7 +63,7 @@ body img {
 
 /* pag index */
 /* seccion trabajos recientes */
-.tituloTrabajos, .tituloSobreMi, ._tituloG, .tituloP, .textoP, .tituloServicio {
+.tituloTrabajos, .tituloServicio, .tituloP, .textoP, ._tituloG, .tituloSobreMi {
   text-transform: uppercase;
   color: lime;
 }
@@ -64,7 +73,7 @@ body img {
 }
 
 /* seccion servicio */
-.titulo__servicio, ._tituloLegend, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, .textoSobreMi, .tituloTwitch, .textoTwitch, .tituloModelo3D, .textModelo, .tituloPixel, .textPixel, .texto-descripcion, .link-Lista {
+.titulo__servicio, .texto-descripcion, .tituloPixel, .textPixel, .tituloModelo3D, .textModelo, .tituloTwitch, .textoTwitch, .textoSobreMi, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
   color: lime;
 }
 
@@ -190,26 +199,20 @@ body img {
   row-gap: 15px;
 }
 
+.galeria__item:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-transition: -webkit-transform 500ms ease;
+  transition: -webkit-transform 500ms ease;
+  transition: transform 500ms ease;
+  transition: transform 500ms ease, -webkit-transform 500ms ease;
+}
+
 /* pag aboutme */
 .sobreMiCont {
   margin-left: auto;
   margin-right: auto;
-}
-
-.aboutMe1-about {
-  background-image: url(../media/aboutMe1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 623px;
-}
-
-.aboutMe2-about {
-  background-image: url(../media/aboutMe2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 623px;
 }
 
 /* pag contactame */
@@ -232,14 +235,17 @@ footer {
   background-color: black;
   height: 83px;
 }
+
 footer .socialIconos {
   margin: auto;
   padding: 0;
   /* color de social */
 }
+
 footer .socialIconos .icono-lista {
   list-style: none;
 }
+
 footer .socialIconos .iconos {
   color: #b314c7;
 }
@@ -247,91 +253,74 @@ footer .socialIconos .iconos {
 /*media queries*/
 @media screen and (max-width: 340px) {
   .custom-text {
-    font-size: 0.5rem;
+    font-size: .5rem;
   }
-
   /* bottombar */
   .navbar-brand {
     font-size: 1.5rem;
   }
-
   /* carousel */
   .carousel-item {
     height: 22rem;
   }
 }
+
 @media screen and (min-width: 340px) and (max-width: 600px) {
   .custom-text {
-    font-size: 0.7rem;
+    font-size: .7rem;
   }
-
   /* bottombar */
   .navbar-brand {
     font-size: 2rem;
   }
-
   /* carousel */
   .carousel-item {
     height: 26rem;
   }
 }
+
 @media screen and (max-width: 600px) {
   /* seccion servicio */
   .listaServicios {
     padding: 0;
     gap: 40px;
   }
-
-  /* pag aboutme */
-  .aboutMe1-about {
-    background-image: url(../media/aboutMe1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 317px;
-  }
-
-  .aboutMe2-about {
-    background-image: url(../media/aboutMe2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 317px;
-  }
 }
+
 @media screen and (min-width: 600px) {
   /* bottombar */
   .navbar-brand {
     font-size: 3rem;
   }
-
   /* carousel */
   .carousel-item {
     height: 620px;
   }
-
+  /*animaciones*/
   /*topbar efecto*/
   .effecto-icono:hover i {
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-transition: -webkit-transform ease-in-out 200ms;
+    transition: -webkit-transform ease-in-out 200ms;
     transition: transform ease-in-out 200ms;
+    transition: transform ease-in-out 200ms, -webkit-transform ease-in-out 200ms;
   }
-
   /*nav efecto*/
   .nav-link::before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     height: 5px;
     background-color: lime;
     bottom: 23px;
     width: 0%;
+    -webkit-transition: all ease-in-out 200ms;
     transition: all ease-in-out 200ms;
   }
-
   .nav-link:hover::before {
     width: 100%;
   }
-
   /*efecto link*/
   .fancy-link::after {
     content: "";
@@ -341,16 +330,21 @@ footer .socialIconos .iconos {
     width: 100%;
     height: 2px;
     background: #ff8c28;
-    transform: scaleX(0);
-    transform-origin: right;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform ease-in 250ms;
+    transition: -webkit-transform ease-in 250ms;
     transition: transform ease-in 250ms;
+    transition: transform ease-in 250ms, -webkit-transform ease-in 250ms;
   }
-
   .fancy-link:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
-
   .linkP::after, .email_Link::after {
     content: "";
     position: absolute;
@@ -359,23 +353,27 @@ footer .socialIconos .iconos {
     width: 100%;
     height: 2px;
     background: #ff8c28;
-    transform: scaleX(0);
-    transform-origin: right;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform ease-in 250ms;
+    transition: -webkit-transform ease-in 250ms;
     transition: transform ease-in 250ms;
+    transition: transform ease-in 250ms, -webkit-transform ease-in 250ms;
   }
-
   .linkP:hover::after, .email_Link:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
-
   /*fin effecto link*/
   /*efecto de boton*/
   .btn {
     position: relative;
     z-index: 1;
   }
-
   .btn::after {
     content: "";
     position: absolute;
@@ -385,17 +383,21 @@ footer .socialIconos .iconos {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: -1;
-    transform: scaleX(0);
-    transform-origin: right;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform 200ms ease-in;
+    transition: -webkit-transform 200ms ease-in;
     transition: transform 200ms ease-in;
+    transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
   }
-
   .btn:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+            transform-origin: left;
   }
-
   /* fin efecto de boton*/
 }
-
 /*# sourceMappingURL=styles.css.map */
