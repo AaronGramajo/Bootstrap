@@ -188,7 +188,7 @@ body img {
     row-gap: 15px;
 }
 
-.galeria__item:hover {
+.galeria__item:hover .gallery__img{
     cursor: pointer;
     transform: scale(1.02);
     transition: transform 500ms ease;
