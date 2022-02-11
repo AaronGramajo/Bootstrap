@@ -1,11 +1,15 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+html {
     overflow-x: hidden;
 }
 
 $colorprincipal: rgb(0, 255, 0);
 $colorsecundaria: rgb(179, 20, 199);
-$colorbackground: linear-gradient(360deg,#110023,#775ab1);
+$colorbackground: linear-gradient(360deg, #110023, #775ab1);
 $colororange: #ff8c28;
+$myfont: oswald;
+
 body {
     background-image: $colorbackground;
 }
@@ -18,15 +22,18 @@ body {
 /* topbar */
 .topbar {
     height: 45px;
+
     .custom-text {
-        color:$colorprincipal !important;
+        color: $colorprincipal !important;
     }
+
     .socialIconos {
         margin: auto;
-    
+
         .icono-lista {
             list-style: none;
         }
+
         /* color de social */
         .iconos {
             color: $colorsecundaria !important;
@@ -73,13 +80,13 @@ body img {
 }
 
 /* seccion servicio */
-.titulo__servicio, .link-Lista {
+.titulo__servicio,.link-Lista {
     color: $colorprincipal;
 }
 
 /*hover de links servicios*/
 .link-Lista:hover {
-    color:$colororange
+    color: $colororange
 }
 
 .listaServicios {
@@ -105,6 +112,7 @@ body img {
 /* titulo de pag */
 .texto-descripcion {
     @extend .titulo__servicio;
+
     .fancy-link {
         color: $colororange;
         position: relative;
@@ -117,7 +125,7 @@ body img {
 }
 
 /* seccion pixel art */
-.tituloPixel , .textPixel {
+.tituloPixel,.textPixel {
     @extend .titulo__servicio;
 }
 
@@ -128,7 +136,7 @@ body img {
     background-size: $bsize;
 }
 
-@each $pixel in pixelArt1, pixelArt2, pixelArt3 {
+@each $pixel in pixelArt1,pixelArt2,pixelArt3 {
     .#{$pixel}-pic {
         background-image: url(../media/#{$pixel}.jpg);
         @include background(center, no-repeat, contain);
@@ -140,11 +148,11 @@ body img {
 }
 
 /* seccion modelos */
-.tituloModelo3D, .textModelo {
+.tituloModelo3D,.textModelo {
     @extend .titulo__servicio;
 }
 
-@each $model in model3D1, model3D4, model3D3 {
+@each $model in model3D1,model3D4,model3D3 {
     .#{$model}-foto {
         background-image: url(../media/#{$model}.jpg);
         @include background(center, no-repeat, contain);
@@ -152,11 +160,11 @@ body img {
 }
 
 /* seccion twitch */
-.tituloTwitch, .textoTwitch {
+.tituloTwitch,.textoTwitch {
     @extend .titulo__servicio;
 }
 
-@each $twitch in twitchEmote1, twitchEmote2, perfil1 {
+@each $twitch in twitchEmote1,twitchEmote2,perfil1 {
     .#{$twitch}-emote {
         background-image: url(../media/#{$twitch}.jpg);
         @include background(center, no-repeat, contain);
@@ -164,7 +172,7 @@ body img {
 }
 
 /* pag proyectos */
-.tituloP, .textoP {
+.tituloP,.textoP {
     @extend .tituloTrabajos;
 }
 
@@ -188,7 +196,7 @@ body img {
     row-gap: 15px;
 }
 
-.galeria__item:hover .gallery__img{
+.galeria__item:hover .gallery__img {
     cursor: pointer;
     transform: scale(1.02);
     transition: transform 500ms ease;
@@ -209,7 +217,7 @@ body img {
 }
 
 /* pag contactame */
-.tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje {
+.tituloContactame,.textoContactame,.email,.labelNombre,.labelEmail,.labelMensaje {
     @extend .titulo__servicio;
 }
 
@@ -233,12 +241,15 @@ body img {
 footer {
     background-color: black;
     height: 83px;
+
     .socialIconos {
         margin: auto;
         padding: 0;
+
         .icono-lista {
             list-style: none;
         }
+
         /* color de social */
         .iconos {
             color: $colorsecundaria;
@@ -249,12 +260,14 @@ footer {
 /*media queries*/
 @media screen and (max-width:340px) {
     .custom-text {
-        font-size: .5rem;
+        font-size: .57rem;
     }
+
     /* bottombar */
     .navbar-brand {
         font-size: 1.5rem;
     }
+
     /* carousel */
     .carousel-item {
         height: 22rem;
@@ -265,10 +278,12 @@ footer {
     .custom-text {
         font-size: .7rem;
     }
+
     /* bottombar */
     .navbar-brand {
         font-size: 2rem;
     }
+
     /* carousel */
     .carousel-item {
         height: 26rem;
@@ -288,99 +303,215 @@ footer {
     .navbar-brand {
         font-size: 3rem;
     }
+
     /* carousel */
     .carousel-item {
         height: 620px;
     }
-
-    /*animaciones*/
-    /*topbar efecto*/
-    .effecto-icono:hover i {
-        transform: translateY(-10px);
-        transition: transform ease-in-out 200ms;
-    }
-
-    /*nav efecto*/
-    .nav-link::before {
-        content: '';
-        position: absolute;
-        display: block;
-        height: 5px;
-        
-        background-color: $colorprincipal;
-        bottom: 23px;
-        width: 0%;
-        
-        transition: all ease-in-out 200ms;
-    }
-    
-    .nav-link:hover::before {
-        width: 100%;
-    }
-
-    /*efecto link*/
-    .fancy-link::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height:2px;
-        background: $colororange;
-
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform ease-in 250ms;
-    }
-
-    .fancy-link:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-
-    .linkP::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height:2px;
-        background: $colororange;
-
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform ease-in 250ms;
-    }
-
-    .linkP:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    /*fin effecto link*/
-
-    /*efecto de boton*/
-    .btn {
-        position: relative;
-        z-index: 1;
-    }
-
-    .btn::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.5);
-        z-index: -1;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 200ms ease-in;
-    }
-
-    .btn:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-    }
-    /* fin efecto de boton*/
 }
+
+
+@media screen and (min-width: 1024px) {
+    /*bottombar*/
+    .navbar-brand {
+        color: $colorprincipal !important;
+        font-family: $myfont;
+    }
+
+    .navbar-brand:hover {
+        transform: scale(1.02);
+        transition: transform 250ms;
+        color: $colororange !important;
+    }
+
+    .nav-link {
+        color: $colorprincipal !important;
+        padding: 0 !important;
+        position: relative;
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .tituloTrabajos {
+        text-transform: uppercase;
+        color: $colorprincipal;
+        font-family: $myfont;
+    }
+
+    .titulo__servicio,.link-Lista {
+        color: $colorprincipal;
+        font-family: $myfont;
+    }
+
+    .contratame {
+        text-transform: uppercase;
+        font-family: $myfont;
+        font-size: 1.5rem;
+    }
+
+    .btn-success {
+        background-color: $colororange !important;
+        border-color: $colororange !important;
+        font-family: $myfont;
+        font-size: 1.1rem;
+    }
+
+    .texto-descripcion {
+        color: $colorprincipal;
+        font-size: 1.5rem;
+        
+        .fancy-link {
+            color: $colororange;
+            position: relative;
+            text-decoration: none;
+        }
+    }
+
+    .tituloServicio {
+        text-transform: uppercase;
+        color: $colorprincipal;;
+    }
+
+    .tituloPixel {
+        color: $colorprincipal;
+        font-size: 2.5rem;
+    }
+
+    .textPixel {
+        color: $colorprincipal;
+        font-size: 1.5rem;
+    }
+
+    .tituloModelo3D {
+        @extend .tituloPixel;
+    }
+
+    .textModelo {
+    @extend .textPixel;
+    }
+
+    .tituloTwitch {
+        @extend .tituloPixel;
+    }
+
+    .textoTwitch {
+        @extend .textPixel;
+    }
+
+    .tituloP {
+        @extend .tituloServicio;
+    }
+
+    .textoP {
+        @extend .textPixel;
+    }
+
+    .tituloSobreMi {
+        @extend .tituloServicio;
+    }
+
+    .textoSobreMi {
+        @extend .tituloPixel;
+    }
+
+    .tituloContactame {
+        @extend .tituloServicio;
+    }
+
+    .textoContactame,.email,.labelNombre,.labelEmail,.labelMensaje {
+        color: $colorprincipal;
+        font-size: 1.5rem;
+    }
+}
+
+/*animaciones*/
+/*topbar efecto*/
+.effecto-icono:hover i {
+    transform: translateY(-10px);
+    transition: transform ease-in-out 200ms;
+}
+    
+/*nav efecto*/
+.nav-link::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 5px;
+    
+    background-color: $colorprincipal;
+    bottom: 23px;
+    width: 0%;
+    
+    transition: all ease-in-out 200ms;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+/*efecto link*/
+.fancy-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $colororange;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform ease-in 250ms;
+}
+
+.fancy-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.linkP::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: $colororange;
+
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform ease-in 250ms;
+}
+
+.linkP:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+/*fin effecto link*/
+
+/*efecto de boton*/
+.btn {
+    position: relative;
+    z-index: 1;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in;
+}
+
+.btn:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* fin efecto de boton*/

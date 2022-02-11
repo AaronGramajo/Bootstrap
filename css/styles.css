@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 html {
   overflow-x: hidden;
 }
@@ -63,7 +64,7 @@ body img {
 
 /* pag index */
 /* seccion trabajos recientes */
-.tituloTrabajos, .tituloServicio, .tituloP, .textoP, ._tituloG, .tituloSobreMi {
+.tituloTrabajos, .tituloServicio, .tituloP, .tituloSobreMi, .tituloContactame, .textoP, ._tituloG {
   text-transform: uppercase;
   color: lime;
 }
@@ -73,7 +74,7 @@ body img {
 }
 
 /* seccion servicio */
-.titulo__servicio, .texto-descripcion, .tituloPixel, .textPixel, .tituloModelo3D, .textModelo, .tituloTwitch, .textoTwitch, .textoSobreMi, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
+.titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
   color: lime;
 }
 
@@ -253,7 +254,7 @@ footer .socialIconos .iconos {
 /*media queries*/
 @media screen and (max-width: 340px) {
   .custom-text {
-    font-size: .5rem;
+    font-size: .57rem;
   }
   /* bottombar */
   .navbar-brand {
@@ -296,108 +297,188 @@ footer .socialIconos .iconos {
   .carousel-item {
     height: 620px;
   }
-  /*animaciones*/
-  /*topbar efecto*/
-  .effecto-icono:hover i {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-    -webkit-transition: -webkit-transform ease-in-out 200ms;
-    transition: -webkit-transform ease-in-out 200ms;
-    transition: transform ease-in-out 200ms;
-    transition: transform ease-in-out 200ms, -webkit-transform ease-in-out 200ms;
-  }
-  /*nav efecto*/
-  .nav-link::before {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 5px;
-    background-color: lime;
-    bottom: 23px;
-    width: 0%;
-    -webkit-transition: all ease-in-out 200ms;
-    transition: all ease-in-out 200ms;
-  }
-  .nav-link:hover::before {
-    width: 100%;
-  }
-  /*efecto link*/
-  .fancy-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #ff8c28;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    -webkit-transition: -webkit-transform ease-in 250ms;
-    transition: -webkit-transform ease-in 250ms;
-    transition: transform ease-in 250ms;
-    transition: transform ease-in 250ms, -webkit-transform ease-in 250ms;
-  }
-  .fancy-link:hover::after {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-  .linkP::after, .email_Link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #ff8c28;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    -webkit-transition: -webkit-transform ease-in 250ms;
-    transition: -webkit-transform ease-in 250ms;
-    transition: transform ease-in 250ms;
-    transition: transform ease-in 250ms, -webkit-transform ease-in 250ms;
-  }
-  .linkP:hover::after, .email_Link:hover::after {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-  /*fin effecto link*/
-  /*efecto de boton*/
-  .btn {
-    position: relative;
-    z-index: 1;
-  }
-  .btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-    -webkit-transition: -webkit-transform 200ms ease-in;
-    transition: -webkit-transform 200ms ease-in;
-    transition: transform 200ms ease-in;
-    transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
-  }
-  .btn:hover::after {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: left;
-            transform-origin: left;
-  }
-  /* fin efecto de boton*/
 }
+
+@media screen and (min-width: 1024px) {
+  /*bottombar*/
+  .navbar-brand {
+    color: lime !important;
+    font-family: oswald;
+  }
+  .navbar-brand:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    -webkit-transition: -webkit-transform 250ms;
+    transition: -webkit-transform 250ms;
+    transition: transform 250ms;
+    transition: transform 250ms, -webkit-transform 250ms;
+    color: #ff8c28 !important;
+  }
+  .nav-link {
+    color: lime !important;
+    padding: 0 !important;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  .tituloTrabajos, .tituloServicio, .tituloP, .tituloSobreMi, .tituloContactame, .textoP, ._tituloG {
+    text-transform: uppercase;
+    color: lime;
+    font-family: oswald;
+  }
+  .titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
+    color: lime;
+    font-family: oswald;
+  }
+  .contratame {
+    text-transform: uppercase;
+    font-family: oswald;
+    font-size: 1.5rem;
+  }
+  .btn-success {
+    background-color: #ff8c28 !important;
+    border-color: #ff8c28 !important;
+    font-family: oswald;
+    font-size: 1.1rem;
+  }
+  .texto-descripcion {
+    color: lime;
+    font-size: 1.5rem;
+  }
+  .texto-descripcion .fancy-link {
+    color: #ff8c28;
+    position: relative;
+    text-decoration: none;
+  }
+  .tituloServicio, .tituloP, .tituloSobreMi, .tituloContactame {
+    text-transform: uppercase;
+    color: lime;
+  }
+  .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi {
+    color: lime;
+    font-size: 2.5rem;
+  }
+  .textPixel, .textModelo, .textoTwitch, .textoP {
+    color: lime;
+    font-size: 1.5rem;
+  }
+  .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje {
+    color: lime;
+    font-size: 1.5rem;
+  }
+}
+
+/*animaciones*/
+/*topbar efecto*/
+.effecto-icono:hover i {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-transition: -webkit-transform ease-in-out 200ms;
+  transition: -webkit-transform ease-in-out 200ms;
+  transition: transform ease-in-out 200ms;
+  transition: transform ease-in-out 200ms, -webkit-transform ease-in-out 200ms;
+}
+
+/*nav efecto*/
+.nav-link::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 5px;
+  background-color: lime;
+  bottom: 23px;
+  width: 0%;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+/*efecto link*/
+.fancy-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff8c28;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform ease-in 250ms;
+  transition: -webkit-transform ease-in 250ms;
+  transition: transform ease-in 250ms;
+  transition: transform ease-in 250ms, -webkit-transform ease-in 250ms;
+}
+
+.fancy-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.linkP::after, .email_Link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff8c28;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform ease-in 250ms;
+  transition: -webkit-transform ease-in 250ms;
+  transition: transform ease-in 250ms;
+  transition: transform ease-in 250ms, -webkit-transform ease-in 250ms;
+}
+
+.linkP:hover::after, .email_Link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+/*fin effecto link*/
+/*efecto de boton*/
+.btn {
+  position: relative;
+  z-index: 1;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 200ms ease-in;
+  transition: -webkit-transform 200ms ease-in;
+  transition: transform 200ms ease-in;
+  transition: transform 200ms ease-in, -webkit-transform 200ms ease-in;
+}
+
+.btn:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+/* fin efecto de boton*/
 /*# sourceMappingURL=styles.css.map */
