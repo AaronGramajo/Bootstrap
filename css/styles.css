@@ -44,6 +44,11 @@ body img {
 }
 
 /*bottombar*/
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .navbar-brand {
   color: lime !important;
 }
@@ -91,7 +96,7 @@ body img {
   color: lime;
 }
 
-.sidebar p {
+.sidebar table {
   color: lime;
 }
 
