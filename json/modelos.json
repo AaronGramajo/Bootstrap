@@ -1,0 +1,23 @@
+[
+    {
+        "id": 4,
+        "nombre": "Modelo 3D",
+        "clase": "modelo simple",
+        "precio": 25.00,
+        "img": "../media/model3D1.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Modelo 3D",
+        "clase": "modelo animado",
+        "precio": 50.00,
+        "img": "../media/model3D3.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Modelo 3D",
+        "clase": "Full body & animado",
+        "precio": 100.00,
+        "img": "../media/model3D4.jpg"
+    }
+]

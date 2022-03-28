@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "nombre": "Pixel",
+        "tamaño": "Chico",
+        "precio": 10.00,
+        "img": "../media/pixelArt1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Pixel",
+        "tamaño": "Mediano",
+        "precio": 15.00,
+        "img": "../media/pixelArt2.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Pixel",
+        "tamaño": "Grande",
+        "precio": 20.00,
+        "img": "../media/pixelArt3.jpg"
+    }
+]

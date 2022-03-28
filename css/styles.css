@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 html {
   overflow-x: hidden;
@@ -62,6 +63,46 @@ body img {
   color: #ff8c28 !important;
 }
 
+.cart-icon {
+  color: black;
+}
+
+.cart:hover .cart-icon {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-transition: -webkit-transform ease-in-out 100ms;
+  transition: -webkit-transform ease-in-out 100ms;
+  transition: transform ease-in-out 100ms;
+  transition: transform ease-in-out 100ms, -webkit-transform ease-in-out 100ms;
+}
+
+.sidebar {
+  position: fixed;
+  width: 350px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  right: -350px;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  z-index: 99999;
+}
+
+.sidebar h3 {
+  color: lime;
+}
+
+.sidebar p {
+  color: lime;
+}
+
+.sidebar .precioProducto {
+  padding-top: 10px;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
 /* pag index */
 /* seccion trabajos recientes */
 .tituloTrabajos, .tituloServicio, .tituloP, .tituloSobreMi, .tituloContactame, .textoP, ._tituloG {
@@ -74,7 +115,7 @@ body img {
 }
 
 /* seccion servicio */
-.titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
+.titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .card-name, .card-tamaño, .card-clase, .card-precio, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
   color: lime;
 }
 
@@ -111,25 +152,12 @@ body img {
 
 /* seccion pixel art */
 /*mi mixin */
-.pixelArt1-pic {
-  background-image: url(../media/pixelArt1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.card {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.pixelArt2-pic {
-  background-image: url(../media/pixelArt2.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.pixelArt3-pic {
-  background-image: url(../media/pixelArt3.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.card-name, .card-tamaño, .card-clase, .card-precio {
+  font-size: 1.5rem;
 }
 
 .col-sm-4 {
@@ -326,7 +354,7 @@ footer .socialIconos .iconos {
     color: lime;
     font-family: oswald;
   }
-  .titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
+  .titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .card-name, .card-tamaño, .card-clase, .card-precio, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
     color: lime;
     font-family: oswald;
   }
@@ -335,7 +363,7 @@ footer .socialIconos .iconos {
     font-family: oswald;
     font-size: 1.5rem;
   }
-  .btn-success {
+  .btn-success, .btnPixel {
     background-color: #ff8c28 !important;
     border-color: #ff8c28 !important;
     font-family: oswald;

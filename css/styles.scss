@@ -68,6 +68,42 @@ body img {
     color: $colororange !important;
 }
 
+.cart-icon {
+    color:black
+}
+
+.cart:hover .cart-icon {
+    transform: scale(1.3);
+    transition: transform ease-in-out 100ms;
+}
+
+// carrito
+.sidebar {
+    position: fixed;
+    width: 350px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    right: -350px;
+    transition:all 500ms ease-in-out ;
+    z-index: 99999;
+
+    h3{
+        color: $colorprincipal;
+    }
+
+    p{
+        color: $colorprincipal;
+    }
+
+    .precioProducto {
+        padding-top: 10px;
+    }
+}
+
+.sidebar.active {
+    right: 0;
+}
+
 /* pag index */
 /* seccion trabajos recientes */
 .tituloTrabajos {
@@ -136,11 +172,25 @@ body img {
     background-size: $bsize;
 }
 
-@each $pixel in pixelArt1,pixelArt2,pixelArt3 {
-    .#{$pixel}-pic {
-        background-image: url(../media/#{$pixel}.jpg);
-        @include background(center, no-repeat, contain);
-    }
+.card {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.card-name {
+    @extend .titulo__servicio;
+    font-size: 1.5rem;
+}
+
+.card-tamaño {
+    @extend .card-name;
+}
+
+.card-clase {
+    @extend .card-name;
+}
+
+.card-precio {
+    @extend .card-name;
 }
 
 .col-sm-4 {
@@ -350,7 +400,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    .btn-success {
+    .btn-success, .btnPixel {
         background-color: $colororange !important;
         border-color: $colororange !important;
         font-family: $myfont;

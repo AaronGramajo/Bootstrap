@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GermArtsStudios | Digital Artist</title>
+    <meta name="description" content="Bienvenido a GermArtsStudios! El mejor Artista para tus necesidades de twitch emotes y medallas, emotes para discord, props 3D, y mucho mas!">
+    <meta name="keywords" content="Digital artist, Twitch, Emotes, 3D models, Digital Drawings, Freelancer, Animator">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- aos link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- mi css link -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="media/iconoGatito.jpg" type="image/x-icon">
+</head>
+
+<body onload="init()">
+    <!-- navbar -->
+    <header>
+        <!-- topbar -->
+        <div class="container-fluid d-flex align-items-center justify-content-end gap-3 bg-black topbar">
+            <!-- texto -->
+            <div class="">
+                <span class="custom-text">CUSTOM TWITCH EMOTES | TOP EMOTE ARTIST </span>
+            </div>
+            <div class="d-flex flex-row">
+                <!-- iconos -->
+                <ul class="socialIconos d-flex flex-row gap-3">
+                    <li class="icono-lista effecto-icono">
+                        <a class="iconos" href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li class="icono-lista effecto-icono">
+                        <a class="iconos" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square"></i></a>
+                    </li>
+                    <li class="icono-lista effecto-icono">
+                        <a class="iconos" href="http://gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope-square"></i></a>
+                    </li>
+                    <li class="icono-lista effecto-icono">
+                        <a class="iconos" href="http://twitch.tv" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitch"></i></a>
+                    </li>
+                    <li class="icono-lista effecto-icono">
+                        <a class="iconos" href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--bottombar-->
+        <nav class="navbar navbar-expand-md navbar-light bottombar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">GermArtsStudios</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/aboutme.html">About me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="paginas/contactame.html">Contactos</a>
+                        </li>
+                        <li>
+                            <a class="cart" id="carritoIcono" href="#"><i class="fa-solid fa-cart-shopping cart-icon"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- sidebar del carrito -->
+    <div class="sidebar" id="tablaDeCarrito">
+        <div class="modal-contenedor">
+            <div class="modal-carrito">
+                <h3>Carrito</h3>
+                <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                <div id="carrito-contenedor">
+    
+                </div>
+                <div class="row">
+                    <div class="col-6 d-flex justify-content-center">
+                        <p class="precioProducto"><b>Precio total: $<span id="precioTotal"></span></b></p>
+                    </div>
+                    <div class="col-6 d-flex justify-content-evenly">
+                        <button class="btn btn-danger btn-sm" id="btn-vaciar-carrito">Vaciar Carrito</button>
+                        <a class="d-flex" href="procesar-compra.html"><button class="btn btn-primary btn-sm" id="btn-procesar-compra">Procesar Compra</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+    </main>
+
+    <!-- footer -->
+    <footer class="text-white text-center" id="footer">
+        <div id="footer-bottom">
+            <!-- texto -->
+            <div class="">
+                <span class="custom-text text-center">copyright &copy; todos los derechos reservados</span><br>
+                <span class="custom-text text-center">Devolped by Aaron Gramajo</span>
+            </div>
+            <div class="d-flex flex-row">
+                <!-- iconos -->
+                <ul class="socialIconos d-flex flex-row gap-3">
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a>
+                    </li>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square"></i></a>
+                    </li>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope-square"></i></a>
+                    </li>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://twitch.tv" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitch"></i></a>
+                    </li>
+                    <li class="icono-lista">
+                        <a class="iconos" href="http://#" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <!-- iconos js -->
+    <script src="https://kit.fontawesome.com/8520cf0c66.js" crossorigin="anonymous"></script>
+    <!-- aos js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- my script -->
+    <script src="js/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

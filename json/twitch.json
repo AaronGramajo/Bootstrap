@@ -1,0 +1,23 @@
+[
+    {
+        "id": 7,
+        "nombre": "Twitch",
+        "clase": "twitch emotes + badges",
+        "precio": 15.00,
+        "img": "../media/twitchEmote1.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "Twitch",
+        "clase": "Emotes/badges & templates",
+        "precio": 50.00,
+        "img": "../media/twitchEmote2.jpg"
+    },
+    {
+        "id": 9,
+        "nombre": "Twitch",
+        "clase": "Full body perfil + emotes/badges & templates",
+        "precio": 100.00,
+        "img": "../media/perfil1.jpg"
+    }
+]
