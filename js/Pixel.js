@@ -20,10 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 })
 
-cards_pixel.addEventListener('click', e => {
-    abrir_cerrarCarrito()
-    addCarrito(e)
-})
+if (cards_pixel) {
+    cards_pixel.addEventListener('click', e => {
+        addCarrito(e)
+    })
+}
 
 const pintarCards = data => {
     data.forEach(producto => {

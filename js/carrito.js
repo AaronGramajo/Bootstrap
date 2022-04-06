@@ -4,9 +4,13 @@ const footer = document.querySelector('#carrito-footer')
 const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
 const fragment_carrito = document.createDocumentFragment()
+const btncomprar = document.querySelector('#btn-procesar-compra-servicio')
 
 const addCarrito = e => {
-    (e.target.classList.contains('btnPixel')) && setCarrito(e.target.parentElement)
+    if (e.target.classList.contains('btnPixel')) {
+        abrir_cerrarCarrito()
+        setTimeout(setCarrito(e.target.parentElement) ,3000)
+    }
     e.stopPropagation()
 }
 
@@ -19,6 +23,7 @@ const setCarrito = objeto => {
         id: objeto.querySelector('.btnPixel').dataset.id,
         nombre: objeto.querySelector('h5').textContent,
         tamaño: objeto.querySelector('.card-tamaño').textContent,
+        clase: objeto.querySelector('.card-clase').textContent,
         precio: objeto.querySelector('.card-precio').textContent,
         cantidad: 1
     }
@@ -26,22 +31,29 @@ const setCarrito = objeto => {
         producto.cantidad = carrito[producto.id].cantidad + 1
     }
     carrito[producto.id] = {...producto}
-    pintarCarrito()
+    setTimeout(function() {
+        pintarCarrito();
+    } , 500)
+    setTimeout(function() {
+        abrir_cerrarCarrito();
+    } , 1000)
 }
 
 const pintarCarrito = () => {
     items.innerHTML = ''
     Object.values(carrito).forEach(producto => {
         templateCarrito.querySelector('th').textContent = producto.id
-        templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre+" "+producto.tamaño
+        templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre+" "+producto.tamaño+" "+producto.clase
         templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id
+        templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
         templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
 
         const clone = templateCarrito.cloneNode(true)
         fragment_carrito.appendChild(clone)
     })
     items.appendChild(fragment_carrito)
+
     pintarFooter()
 
     localStorage.setItem('carrito', JSON.stringify(carrito))
@@ -83,6 +95,7 @@ const btnAccion = e => {
 
     if (e.target.classList.contains("btn-danger")) {
         const producto = carrito[e.target.dataset.id]
+        console.log(producto);
         producto.cantidad--
         (producto.cantidad === 0) ? delete carrito[e.target.dataset.id] : carrito[e.target.dataset.id] = {...producto}
         pintarCarrito()
@@ -90,3 +103,29 @@ const btnAccion = e => {
 
     e.stopPropagation()
 }
+// if (btncomprar) {
+//     btncomprar.addEventListener('click', () => {
+//         success();
+//     })
+// }
+
+// function success() {
+//     if (Object.keys(carrito).length === 0) {
+//         Swal.fire({
+//             icon: 'error',
+//             title: 'Vaya!',
+//             text: 'No puedes comprar sin productos en tu carrito!',
+//             confirmButtonText: 'Entendido'
+//         })
+//     } else {
+//         carrito = {}
+//         pintarCarrito()
+//         pintarFooter()
+//         Swal.fire({
+//             icon: 'success',
+//             title: 'Excelente compra!',
+//             text: 'En breve recibirás tus productos!',
+//             confirmButtonText: 'Genial!'
+//         })
+//     }
+// }

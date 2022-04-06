@@ -4,6 +4,10 @@ let precioTotalProcesar = document.querySelector("#precioTotalProcesar");
 let btnComprarTodo = document.querySelector('#btn-comprar-todo');
 
 document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarCarrito()
+    }
     procesarCompra()
 });
 
@@ -18,8 +22,8 @@ btnComprarTodo.addEventListener('click', e => {
         })
     } else {
         carrito = {}
-        actualizarCarrito()
-        mostrarCarrito()
+        pintarCarrito()
+        pintarFooter()
         procesarCompra()
         Swal.fire({
             icon: 'success',
@@ -35,21 +39,22 @@ const totalProcesarCompra = () => {
 }
 
 const procesarCompra = () => {
+    procesarCompraContainer.innerHTML = '';
     if (Object.keys(carrito).length === 0 ) {
-        procesarCompraContainer.innerHTML = '';
-        $(procesarCompraContainer).append(`<h3 class="text-center text-danger mb-5">No tienes productos en tu carrito</h3>`);
+        procesarCompraContainer.innerHTML =`<h3 class="text-center text-danger mb-5">No tienes productos en tu carrito</h3>`;
         totalProcesarCompra()
     } else {
         procesarCompraContainer.innerHTML = '';
         Object.values(carrito).forEach(producto => {
-            $(procesarCompraContainer).append(`
+            procesarCompraContainer.innerHTML =`
             <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="row row-cols-3">
+            <div class="row row-cols-4">
                 <h4><b>*Nombre:</b> ${producto.nombre}</h4>
+                <h4><b>*Clase:</b> ${producto.clase}</h4>
                 <h5><b>*Precio:</b> $ ${producto.precio}</h5>
                 <h5><b>*Cantidad:</b> ${producto.cantidad}</h5>
             </div>
-        </div>`)}
+        </div>`}
         )
         totalProcesarCompra()
     }

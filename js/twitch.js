@@ -15,9 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchData_twitch()
 })
 
-cards_twitch.addEventListener('click', e => {
-    addCarrito(e)
-})
+if (cards_twitch) {
+    cards_twitch.addEventListener('click', e => {
+        addCarrito(e)
+    })
+}
 
 const pintarCards_twitch = data_twitch => {
     data_twitch.forEach(producto => {

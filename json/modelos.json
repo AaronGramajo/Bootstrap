@@ -2,14 +2,14 @@
     {
         "id": 4,
         "nombre": "Modelo 3D",
-        "clase": "modelo simple",
+        "clase": "Modelo Simple",
         "precio": 25.00,
         "img": "../media/model3D1.jpg"
     },
     {
         "id": 5,
         "nombre": "Modelo 3D",
-        "clase": "modelo animado",
+        "clase": "Modelo Animado",
         "precio": 50.00,
         "img": "../media/model3D3.jpg"
     },

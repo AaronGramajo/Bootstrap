@@ -2,7 +2,7 @@
     {
         "id": 7,
         "nombre": "Twitch",
-        "clase": "twitch emotes + badges",
+        "clase": "Twitch emotes + badges",
         "precio": 15.00,
         "img": "../media/twitchEmote1.jpg"
     },

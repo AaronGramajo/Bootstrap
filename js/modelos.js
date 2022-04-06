@@ -17,9 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchData_modelos()
 })
 
-cards_modelos.addEventListener('click', e => {
-    addCarrito(e)
-})
+if (cards_modelos) {
+    cards_modelos.addEventListener('click', e => {
+        addCarrito(e)
+    })
+}
 
 const pintarCards_modelos = data_modelos => {
     data_modelos.forEach(producto => {
