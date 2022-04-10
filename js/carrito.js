@@ -103,29 +103,3 @@ const btnAccion = e => {
 
     e.stopPropagation()
 }
-// if (btncomprar) {
-//     btncomprar.addEventListener('click', () => {
-//         success();
-//     })
-// }
-
-// function success() {
-//     if (Object.keys(carrito).length === 0) {
-//         Swal.fire({
-//             icon: 'error',
-//             title: 'Vaya!',
-//             text: 'No puedes comprar sin productos en tu carrito!',
-//             confirmButtonText: 'Entendido'
-//         })
-//     } else {
-//         carrito = {}
-//         pintarCarrito()
-//         pintarFooter()
-//         Swal.fire({
-//             icon: 'success',
-//             title: 'Excelente compra!',
-//             text: 'En breve recibirás tus productos!',
-//             confirmButtonText: 'Genial!'
-//         })
-//     }
-// }

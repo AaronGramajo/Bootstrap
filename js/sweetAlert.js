@@ -44,18 +44,19 @@ const procesarCompra = () => {
         procesarCompraContainer.innerHTML =`<h3 class="text-center text-danger mb-5">No tienes productos en tu carrito</h3>`;
         totalProcesarCompra()
     } else {
+        let div = document.createElement("div")
         procesarCompraContainer.innerHTML = '';
         Object.values(carrito).forEach(producto => {
-            procesarCompraContainer.innerHTML =`
+            div.innerHTML =`
             <div class="col-lg-12 col-md-12 col-sm-12">
             <div class="row row-cols-4">
                 <h4><b>*Nombre:</b> ${producto.nombre}</h4>
-                <h4><b>*Clase:</b> ${producto.clase}</h4>
+                <h4><b>*Clase/tamaño:</b> ${producto.clase||producto.tamaño}</h4>
                 <h5><b>*Precio:</b> $ ${producto.precio}</h5>
                 <h5><b>*Cantidad:</b> ${producto.cantidad}</h5>
             </div>
-        </div>`}
-        )
+        </div>`})
+        procesarCompraContainer.append(div)
         totalProcesarCompra()
     }
 }
