@@ -2,6 +2,8 @@ let procesarCompraContainer = document.querySelector("#procesarCompraContainer")
 let procesarCompraTotal = document.querySelector("#procesarCompraTotal");
 let precioTotalProcesar = document.querySelector("#precioTotalProcesar");
 let btnComprarTodo = document.querySelector('#btn-comprar-todo');
+const templateprocesarCompra = document.getElementById('template-procesarCompras').content
+const fragment_procesarCompra = document.createDocumentFragment()
 
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('carrito')) {
@@ -44,19 +46,23 @@ const procesarCompra = () => {
         procesarCompraContainer.innerHTML =`<h3 class="text-center text-danger mb-5">No tienes productos en tu carrito</h3>`;
         totalProcesarCompra()
     } else {
-        let div = document.createElement("div")
         procesarCompraContainer.innerHTML = '';
         Object.values(carrito).forEach(producto => {
-            div.innerHTML =`
-            <div class="col-lg-12 col-md-12 col-sm-12">
-            <div class="row row-cols-4">
-                <h4><b>*Nombre:</b> ${producto.nombre}</h4>
-                <h4><b>*Clase/tamaño:</b> ${producto.clase||producto.tamaño}</h4>
-                <h5><b>*Precio:</b> $ ${producto.precio}</h5>
-                <h5><b>*Cantidad:</b> ${producto.cantidad}</h5>
-            </div>
-        </div>`})
-        procesarCompraContainer.append(div)
+            templateprocesarCompra.querySelectorAll('h4')[0].textContent = "*Nombre: "+producto.nombre
+            if(producto.tamaño){
+                templateprocesarCompra.querySelectorAll('h4')[1].textContent = "*Clase/tamaño: "+producto.tamaño
+            }
+            if(producto.clase){
+                templateprocesarCompra.querySelectorAll('h4')[1].textContent = "*Clase/tamaño: "+producto.clase
+            }
+            templateprocesarCompra.querySelectorAll('h5')[0].textContent = "*precio: $"+producto.precio
+            templateprocesarCompra.querySelectorAll('h5')[1].textContent = "*cantidad: "+producto.cantidad
+
+            const clone = templateprocesarCompra.cloneNode(true)
+            fragment_procesarCompra.appendChild(clone)
+        })
+        procesarCompraContainer.appendChild(fragment_procesarCompra)
+
         totalProcesarCompra()
     }
 }

@@ -24,8 +24,8 @@ if (cards_twitch) {
 const pintarCards_twitch = data_twitch => {
     data_twitch.forEach(producto => {
         templateCard.querySelector('h5').textContent = producto.nombre
-        templateCard.querySelector('.card-clase').textContent = producto.clase
-        templateCard.querySelector('.card-precio').textContent = producto.precio
+        templateCard.querySelector('.card-tamaño').textContent = producto.clase
+        templateCard.querySelector('.card-precio').textContent = "$"+producto.precio
         templateCard.querySelector('img').setAttribute("src", producto.img)
         templateCard.querySelector('.btnPixel').dataset.id = producto.id
         const clone = templateCard.cloneNode(true)

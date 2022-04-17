@@ -2,7 +2,7 @@
     {
         "id": 7,
         "nombre": "Twitch",
-        "clase": "Twitch emotes + badges",
+        "clase": "Emotes + badges",
         "precio": 15.00,
         "img": "../media/twitchEmote1.jpg"
     },
@@ -16,7 +16,7 @@
     {
         "id": 9,
         "nombre": "Twitch",
-        "clase": "Full body perfil + emotes/badges & templates",
+        "clase": "Full body perfil + Emotes/badges & templates",
         "precio": 100.00,
         "img": "../media/perfil1.jpg"
     }

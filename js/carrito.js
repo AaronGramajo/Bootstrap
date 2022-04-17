@@ -23,7 +23,7 @@ const setCarrito = objeto => {
         id: objeto.querySelector('.btnPixel').dataset.id,
         nombre: objeto.querySelector('h5').textContent,
         tamaño: objeto.querySelector('.card-tamaño').textContent,
-        clase: objeto.querySelector('.card-clase').textContent,
+        clase: objeto.querySelector('.card-tamaño').textContent,
         precio: objeto.querySelector('.card-precio').textContent,
         cantidad: 1
     }
@@ -43,7 +43,12 @@ const pintarCarrito = () => {
     items.innerHTML = ''
     Object.values(carrito).forEach(producto => {
         templateCarrito.querySelector('th').textContent = producto.id
-        templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre+" "+producto.tamaño+" "+producto.clase
+        if(producto.tamaño) {
+            templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre+" "+producto.tamaño
+        }
+        if(producto.clase) {
+            templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre+" "+producto.clase
+        }
         templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id
         templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
