@@ -27,7 +27,7 @@ const pintarCards_modelos = data_modelos => {
     data_modelos.forEach(producto => {
         templateCard.querySelector('h5').textContent = producto.nombre
         templateCard.querySelector('.card-tamaño').textContent = producto.clase
-        templateCard.querySelector('.card-precio').textContent = "$"+producto.precio
+        templateCard.querySelector('.card-precio').textContent = producto.precio
         templateCard.querySelector('img').setAttribute("src", producto.img)
         templateCard.querySelector('.btnPixel').dataset.id = producto.id
         const clone = templateCard.cloneNode(true)
