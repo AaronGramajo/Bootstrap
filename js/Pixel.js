@@ -26,7 +26,7 @@ if (cards_pixel) {
     })
 }
 
-const pintarCards = data => {
+const pintarCards = (data) => {
     data.forEach(producto => {
         templateCard.querySelector('h5').textContent = producto.nombre
         templateCard.querySelector('.card-tamaño').textContent = producto.tamaño

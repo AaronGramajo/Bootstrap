@@ -100,7 +100,6 @@ const btnAccion = e => {
 
     if (e.target.classList.contains("btn-danger")) {
         const producto = carrito[e.target.dataset.id]
-        console.log(producto);
         producto.cantidad--
         (producto.cantidad === 0) ? delete carrito[e.target.dataset.id] : carrito[e.target.dataset.id] = {...producto}
         pintarCarrito()

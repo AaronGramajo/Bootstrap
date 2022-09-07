@@ -120,7 +120,7 @@ body img {
 }
 
 /* seccion servicio */
-.titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .card-name, .card-tamaño, .card-clase, .card-precio, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
+.titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .card-name, .card-tamaño, .card-clase, .moneySign, .card-precio, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
   color: lime;
 }
 
@@ -161,7 +161,7 @@ body img {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.card-name, .card-tamaño, .card-clase, .card-precio {
+.card-name, .card-tamaño, .card-clase, .moneySign, .card-precio {
   font-size: 1.5rem;
 }
 
@@ -364,7 +364,7 @@ footer .socialIconos .iconos {
     color: lime;
     font-family: oswald;
   }
-  .titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .card-name, .card-tamaño, .card-clase, .card-precio, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
+  .titulo__servicio, .texto-descripcion, .tituloPixel, .tituloModelo3D, .tituloTwitch, .textoSobreMi, .textPixel, .textModelo, .textoTwitch, .textoP, .card-name, .card-tamaño, .card-clase, .moneySign, .card-precio, .tituloContactame, .textoContactame, .email, .labelNombre, .labelEmail, .labelMensaje, ._tituloLegend, .link-Lista {
     color: lime;
     font-family: oswald;
   }
